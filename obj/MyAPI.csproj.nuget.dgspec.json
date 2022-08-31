@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MyAPI\\MyAPI\\MyAPI.csproj": {}
+    "D:\\GIT\\DemoUserApi\\MyAPI.csproj": {}
   },
   "projects": {
-    "D:\\MyAPI\\MyAPI\\MyAPI.csproj": {
+    "D:\\GIT\\DemoUserApi\\MyAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyAPI\\MyAPI\\MyAPI.csproj",
+        "projectUniqueName": "D:\\GIT\\DemoUserApi\\MyAPI.csproj",
         "projectName": "MyAPI",
-        "projectPath": "D:\\MyAPI\\MyAPI\\MyAPI.csproj",
+        "projectPath": "D:\\GIT\\DemoUserApi\\MyAPI.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\MyAPI\\MyAPI\\obj\\",
+        "outputPath": "D:\\GIT\\DemoUserApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
