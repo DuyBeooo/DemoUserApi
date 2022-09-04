@@ -28,10 +28,9 @@ namespace MyAPI.Controllers
             return await _context.UserAccounts.ToListAsync();
         }
 
-        // dang nhap
-        // GET: api/UserAccounts/5
-        [HttpGet("{acc},{pass}")]
-        public async Task<ActionResult<UserAccount>> GetUserAccount(string acc,string pass)
+        // dang nhap     
+        [HttpPost("login")]
+        public async Task<ActionResult<UserAccount>> GetUserAccount([FromForm]string acc,[FromForm] string pass)
         {
             var userAccount = await _context.UserAccounts.FirstOrDefaultAsync(u => u.UserName.Equals(acc));
 
@@ -39,7 +38,7 @@ namespace MyAPI.Controllers
             {
                 return NotFound("Khong tim thay tai khoan");
             }
-            if(userAccount.Password != pass)
+            if (userAccount.Password != pass)
             {
                 return Problem("Sai mat khau, vui long nhap lai");
             }
@@ -78,17 +77,23 @@ namespace MyAPI.Controllers
             return Ok("Cap nhat thanh cong");
         }
 
-        // them 1 tai khoan
+        //them 1 tai khoan
         // POST: api/UserAccounts
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<UserAccount>> PostUserAccount(UserAccount userAccount,string acc, string pass1,string pass2)
+        public async Task<ActionResult<UserAccount>> PostUserAccount(List<Object> list)
         {
-            if(pass1 != pass2)
+            int code = Int32.Parse(list.ElementAt(0).ToString());       
+            RegisterAcc ra = (RegisterAcc) list.ElementAt(1);
+            if (ra.Password1 != ra.Password2)
             {
                 return Problem("2 mat khau khong giong nhau, vui long nhap lai");
             }
-            UserAccount user = new UserAccount() { UserName = acc, Password = pass1 };
+            if (code > 5)
+            {
+                return Problem("Code > 5, khong the them tai khoan");
+            }
+            UserAccount user = new UserAccount() { UserName = ra.UserName, Password = ra.Password1 };
             _context.UserAccounts.Add(user);
             await _context.SaveChangesAsync();
 
@@ -97,7 +102,7 @@ namespace MyAPI.Controllers
 
         // xoa tai khoan
         // DELETE: api/UserAccounts/5
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public async Task<IActionResult> DeleteUserAccount(int id)
         {
             var userAccount = await _context.UserAccounts.FindAsync(id);

@@ -12,4 +12,11 @@ namespace MyAPI.Models
         public string Password { get; set; }
         public DateTime CreatedDate { get; set; }
     }
+
+    public  class RegisterAcc
+    {
+        public string UserName { get; set; }
+        public string Password1 { get; set; }
+        public string Password2 { get; set; }
+    }
 }
