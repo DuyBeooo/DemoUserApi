@@ -6082,11 +6082,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyAPI3\\MyAPI3\\MyAPI3.csproj",
+      "projectUniqueName": "D:\\GIT\\DemoUserApi\\MyAPI3\\MyAPI3.csproj",
       "projectName": "MyAPI3",
-      "projectPath": "D:\\MyAPI3\\MyAPI3\\MyAPI3.csproj",
+      "projectPath": "D:\\GIT\\DemoUserApi\\MyAPI3\\MyAPI3.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\MyAPI3\\MyAPI3\\obj\\",
+      "outputPath": "D:\\GIT\\DemoUserApi\\MyAPI3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

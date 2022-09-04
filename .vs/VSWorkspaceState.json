@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MyAPI3",
+    "\\MyAPI3\\Models"
   ],
-  "SelectedNode": "\\MyAPI3.sln",
+  "SelectedNode": "\\MyAPI3\\Models\\LoginRespondFormat.cs",
   "PreviewInSolutionExplorer": false
 }
