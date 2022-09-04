@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MyAPI3",
+    "\\MyAPI3\\Repository"
   ],
   "SelectedNode": "\\MyAPI3.sln",
   "PreviewInSolutionExplorer": false
