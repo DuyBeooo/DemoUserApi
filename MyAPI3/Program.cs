@@ -14,6 +14,7 @@ namespace MyAPI3
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
+            Console.WriteLine("20:03");
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
