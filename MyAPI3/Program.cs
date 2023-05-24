@@ -16,6 +16,7 @@ namespace MyAPI3
             CreateHostBuilder(args).Build().Run();
             Console.WriteLine("20:03");
             Console.WriteLine("20:05");
+            Console.WriteLine("This is local");
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
